@@ -1,0 +1,54 @@
+@import '../Utils.scss';
+
+#app {
+	position: absolute;
+
+	width: 100vw;
+	height: 100vh;
+
+	button {
+		width: vmin(30);
+		height: vmin(30);
+
+		display: grid;
+		place-items: center;
+
+		svg {
+			width: vmin(20);
+			height: vmin(20);
+
+			color: #fff;
+
+			object-fit: contain;
+
+			transition: 300ms fill, 300ms color;
+
+			path {
+				transition: 300ms fill, 300ms color;
+			}
+		}
+
+		&.active {
+			svg {
+				color: #30a284;
+			}
+
+			&::before {
+				border-color: #30a284;
+			}
+		}
+
+		&::before {
+			position: absolute;
+			content: '';
+			inset: 0;
+
+			border: vmin(2) solid #fff;
+			border-radius: vmin(5);
+
+			transform: rotate(45deg);
+
+			transition: 300ms border-color;
+		}
+	}
+}
