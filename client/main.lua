@@ -19,7 +19,7 @@ end);
 RegisterNUICallback('NuiFocus', function(req, resp)
   resp('OK');
 
-  SetNuiFocusKeepInput(true);
+  SetNuiFocusKeepInput(req.display);
   SetNuiFocus(req.display, req.display);
 end);
 
