@@ -48,7 +48,9 @@ local function toggleComponent(name, clothe)
     if clothe.component == 8 then
       local arms = PlayerPed.currentClothes['comp_3'];
 
-      SetPedComponentVariation(PlayerPed.handle, 3, arms.drawable, arms.texture, 0);
+      if arms then
+        SetPedComponentVariation(PlayerPed.handle, 3, arms.drawable, arms.texture, 0);
+      end
     end
 
     PlayerPed.bones[name].on = bool;
