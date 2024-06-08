@@ -38,7 +38,7 @@ const icons: Record<BoneNames, string> = {
 type Bones = Record<BoneNames, Vector2 & { on: boolean; scale: number; }>;
 
 export default function App() {
-	const [display, toggleDisplay] = useState(true);
+	const [display, toggleDisplay] = useState(false);
 	const [bones, setBones] = useState<Bones | null>(null);
 
 	useNuiEvent<Bones>('SetBones', setBones);
