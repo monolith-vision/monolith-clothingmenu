@@ -2,6 +2,8 @@ Menu = {
   drawing = false
 };
 
+local disabledControls = { 1, 2, 3, 4, 5, 6 };
+
 function Menu:StartDrawing()
   self.drawing = true;
 
@@ -43,6 +45,12 @@ function Menu:StartDrawing()
       bones[name].y = screenY;
       bones[name].on = bone.on;
       bones[name].scale = 0.5 + (1 - 0.5) * ((dist - 6.22) / (2.004 - 6.22));
+    end
+
+    if Config.LooseCam then
+      for _, control in next, disabledControls do
+        DisableControlAction(0, control, true);
+      end
     end
 
     DisableControlAction(0, 140, true);
