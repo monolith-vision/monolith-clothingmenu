@@ -2,7 +2,10 @@ RESOURCE_NAME = GetCurrentResourceName();
 
 Config = {
   Debug = true,
-  Locale = 'en'
+  Locale = 'en',
+  -- determines if the Cam should move while the ui is opened
+  LooseCam = true,
+  DefaultMapper = 'K', -- the default configured Key
 };
 
 Config.Clothes = {
