@@ -3,6 +3,7 @@ game 'gta5'
 lua54 'yes'
 
 author 'monolith-vision'
+version '1.0.3'
 
 ui_page 'web/dist/index.html'
 files {
@@ -29,8 +30,4 @@ client_scripts {
   'client/main.lua'
 }
 
-escrow_ignore {
-  'web/dist/**',
-  'locales/*.json',
-  'config.lua'
-}
+server_script 'version.lua'
