@@ -3,7 +3,7 @@ game 'gta5'
 lua54 'yes'
 
 author 'monolith-vision'
-version '1.0.3'
+version '1.0.4'
 
 ui_page 'web/dist/index.html'
 files {
@@ -26,6 +26,7 @@ client_scripts {
   'client/classes/anim.lua',
   'client/classes/menu.lua',
   'client/classes/nui.lua',
+  'client/classes/clothes.lua',
 
   'client/main.lua'
 }
